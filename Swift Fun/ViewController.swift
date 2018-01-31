@@ -10,9 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var hitCount = 0
+    @IBOutlet weak var myLabel: UILabel!
+    @IBAction func button001(_ sender: Any) {
+        
+        hitCount = hitCount + 1
+        
+        print(hitCount)
+        
+        if hitCount == 10 {
+            view.backgroundColor = UIColor.purple
+            myLabel.text = "Hey.  Stop."
+        }
+        
+        if hitCount == 15 {
+            view.backgroundColor = UIColor.green
+            myLabel.text = "You have made me angry!"
+        }
+
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
