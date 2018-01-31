@@ -11,11 +11,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var hitCount = 0
+ //   var hitCount = 0
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var topText: UITextField!
+    @IBOutlet weak var bottomText: UITextField!
+    
+    
     @IBAction func button001(_ sender: Any) {
         
-        hitCount = hitCount + 1
+/*        hitCount += 1
         
         print(hitCount)
         
@@ -28,7 +32,13 @@ class ViewController: UIViewController {
             view.backgroundColor = UIColor.green
             myLabel.text = "You have made me angry!"
         }
-
+ */
+        print(topText.text!)
+        print(bottomText.text!)
+        
+        let sum = Double(topText.text!)! + Double(bottomText.text!)!
+        
+        myLabel.text = "The sum is:  \(sum)"
         
     }
     
